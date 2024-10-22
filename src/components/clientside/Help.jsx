@@ -122,7 +122,7 @@ const Help = () => {
   })).filter(section => section.items.length > 0);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 max-w-screen-xl mx-auto">
+    <div className="min-h-screen bg-white/60 text-gray-900 max-w-screen-xl mx-auto">
       <main className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

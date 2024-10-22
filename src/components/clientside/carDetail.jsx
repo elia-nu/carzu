@@ -43,7 +43,7 @@ const CarDetail = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <button onClick={() => navigate(-1)} className="mb-4 text-blue-500 hover:text-blue-700">
+      <button onClick={() => navigate(-1)} className="mb-4 text-red-500 hover:text-red-700">
         &larr; Back to listings
       </button>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -65,7 +65,7 @@ const CarDetail = () => {
                 key={index}
                 src={image}
                 alt={`${car.title} - ${index + 1}`}
-                className={`w-20 h-20 object-cover rounded-md cursor-pointer ${index === currentImageIndex ? 'border-2 border-blue-500' : ''}`}
+                className={`w-20 h-20 object-cover rounded-md cursor-pointer ${index === currentImageIndex ? 'border-2 border-red-500' : ''}`}
                 onClick={() => setCurrentImageIndex(index)}
               />
             ))}
@@ -81,26 +81,26 @@ const CarDetail = () => {
               <input type="date" className="border rounded p-2 flex-grow" placeholder="Pick-up date" />
               <input type="date" className="border rounded p-2 flex-grow" placeholder="Drop-off date" />
             </div>
-            <button onClick={handleBookNow} className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+            <button onClick={handleBookNow} className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition duration-300">
               Book Now
             </button>
           </div>
           <div className="mb-6">
             <div className="flex border-b">
               <button
-                className={`py-2 px-4 ${activeTab === 'description' ? 'border-b-2 border-blue-500' : ''}`}
+                className={`py-2 px-4 ${activeTab === 'description' ? 'border-b-2 border-red-500' : ''}`}
                 onClick={() => setActiveTab('description')}
               >
                 Description
               </button>
               <button
-                className={`py-2 px-4 ${activeTab === 'features' ? 'border-b-2 border-blue-500' : ''}`}
+                className={`py-2 px-4 ${activeTab === 'features' ? 'border-b-2 border-red-500' : ''}`}
                 onClick={() => setActiveTab('features')}
               >
                 Features
               </button>
               <button
-                className={`py-2 px-4 ${activeTab === 'reviews' ? 'border-b-2 border-blue-500' : ''}`}
+                className={`py-2 px-4 ${activeTab === 'reviews' ? 'border-b-2 border-red-500' : ''}`}
                 onClick={() => setActiveTab('reviews')}
               >
                 Reviews
@@ -159,18 +159,18 @@ const Payment = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <button onClick={() => navigate(-1)} className="mb-4 text-blue-500 hover:text-blue-700">
+      <button onClick={() => navigate(-1)} className="mb-4 text-red-500 hover:text-red-700">
         &larr; Back to car details
       </button>
       <h2 className="text-2xl font-bold mb-4">Complete your booking</h2>
       <div className="bg-white shadow-md rounded-lg p-6">
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center">
-            <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2">1</div>
+            <div className="bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2">1</div>
             <span>Car Details</span>
           </div>
           <div className="flex items-center">
-            <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2">2</div>
+            <div className="bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2">2</div>
             <span className="font-bold">Payment</span>
           </div>
           <div className="flex items-center">
@@ -291,7 +291,7 @@ const Payment = () => {
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="absolute right-3 top-3 text-gray-400" />
                 </div>
               </div>
-              <button type="submit" className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              <button type="submit" className="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Confirm and Pay
               </button>
             </form>

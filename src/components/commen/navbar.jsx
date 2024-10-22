@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
 
   return (
-    <header className=" text-white">
+    <header className={` ${isHomePage ? 'bg-black/50 pt-8' : 'bg-white'}`}>
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
-          <Link to="/" className="text-3xl font-bold">
+          <Link to="/" className="text-4xl font-bold  bg-blur-sm bg-white/10 backdrop-blur-sm rounded-lg px-2 pb-1">
             <span className="text-red-700">Car</span>
             <span className="text-red-300">Zu</span>
           </Link>
@@ -25,17 +28,19 @@ const Navbar = () => {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden lg:flex space-x-6 text-red-700">
-            <NavLink to="/rent-your-car">Rent Your Car</NavLink>
-            <NavLink to="/help">Help</NavLink>
+          <div className={` ${isHomePage ? 'text-red-100' : 'text-red-500'} hidden lg:flex pr-2 0 space-x-6  `}>
+             <NavLink to="/help">Help</NavLink>
             <NavLink to="/signup">Sign Up</NavLink>
             <NavLink to="/login">Log In</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            <Link to="/rent-your-car" className="bg-red-500 text-white -mt-2 font-bold py-2 px-4 rounded hover:bg-red-600 transition duration-300 ml-10">Rent Your Car</Link>
+        
           </div>
         </nav>
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 space-y-4">
+          <div className="lg:hidden mt-4 space-y-4 bg-white/60 border border-red-200 rounded-lg">
             <NavLink to="/rent-your-car" mobile>Rent Your Car</NavLink>
             <NavLink to="/help" mobile>Help</NavLink>
             <NavLink to="/signup" mobile>Sign Up</NavLink>
