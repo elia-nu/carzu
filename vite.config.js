@@ -10,5 +10,15 @@ export default defineConfig({
         additionalData: `@import "leaflet/dist/leaflet.css";`
       }
     }
+  },
+  resolve: {
+    alias: {
+      '@fortawesome/react-fontawesome': '@fortawesome/react-fontawesome/index.es.js',
+    },
+  },
+  build: {
+    rollupOptions: {
+      external: ['react-leaflet']
+    }
   }
 })

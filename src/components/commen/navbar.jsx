@@ -6,17 +6,17 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="bg-gradient-to-r from-red-500 to-red-700 text-white">
+    <header className=" text-white">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
           <Link to="/" className="text-3xl font-bold">
-            <span className="text-yellow-300">Car</span>
-            <span className="text-white">Zu</span>
+            <span className="text-teal-700">Car</span>
+            <span className="text-teal-300">Zu</span>
           </Link>
           
           {/* Hamburger menu for mobile */}
           <button
-            className="lg:hidden text-white focus:outline-none"
+            className="lg:hidden text-teal-700 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ const Navbar = () => {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden lg:flex space-x-6">
+          <div className="hidden lg:flex space-x-6 text-teal-700">
             <NavLink to="/rent-your-car">Rent Your Car</NavLink>
             <NavLink to="/help">Help</NavLink>
             <NavLink to="/signup">Sign Up</NavLink>
@@ -51,7 +51,7 @@ const NavLink = ({ to, children, mobile }) => (
   <Link
     to={to}
     className={`font-medium transition duration-300 ease-in-out
-      ${mobile ? 'block py-2 hover:bg-red-600 px-4 rounded' : 'hover:text-yellow-300'}`}
+      ${mobile ? 'block py-2 hover:bg-red-600 px-4 rounded' : 'hover:text-teal-300'}`}
   >
     {children}
   </Link>
