@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard, faCalendarAlt, faLock, faUser, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -119,15 +118,7 @@ const CarDetail = () => {
               {activeTab === 'reviews' && <p>No reviews yet.</p>}
             </div>
           </div>
-          <div className="mb-6">
-            <h3 className="font-semibold mb-2">Car Location</h3>
-            <MapContainer center={car.location} zoom={13} style={{ height: '300px' }}>
-              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-              <Marker position={car.location}>
-                <Popup>Car location</Popup>
-              </Marker>
-            </MapContainer>
-          </div>
+         
           <div>
             <h3 className="font-semibold mb-2">About the host</h3>
             <div className="flex items-center">
