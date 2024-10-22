@@ -19,7 +19,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('User signup data:', formData);
-    alert('Sign up successful! Welcome to CarShare!');
+    alert('Sign up successful! Welcome to carzu!');
     // Here you would typically send the data to your server for processing
   };
 
@@ -37,7 +37,7 @@ const SignUp = () => {
       
       <main className="flex-grow flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80')"}}>
         <div className="bg-white rounded-xl p-8 w-full max-w-md shadow-xl animate-fadeIn">
-          <h1 className="text-2xl font-bold mb-6 text-center">Join CarShare</h1>
+          <h1 className="text-2xl font-bold mb-6 text-center">Join carzu</h1>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="fullname" className="block mb-2 font-semibold">Full Name</label>

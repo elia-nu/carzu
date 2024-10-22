@@ -25,14 +25,14 @@ const RentYourCar = () => {
   ];
 
   const testimonials = [
-    { content: "CarShare has been a game-changer for me. I'm able to offset my car payments and even save extra money each month. The process is so simple, and the support team is fantastic!", author: "Sarah J.", location: "Los Angeles, CA", avatar: "https://randomuser.me/api/portraits/women/65.jpg" },
-    { content: "I was skeptical at first, but CarShare has exceeded my expectations. The extra income has helped me pay off debts, and I've met some great people along the way. Highly recommended!", author: "Michael T.", location: "New York, NY", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
+    { content: "carzu has been a game-changer for me. I'm able to offset my car payments and even save extra money each month. The process is so simple, and the support team is fantastic!", author: "Sarah J.", location: "Los Angeles, CA", avatar: "https://randomuser.me/api/portraits/women/65.jpg" },
+    { content: "I was skeptical at first, but carzu has exceeded my expectations. The extra income has helped me pay off debts, and I've met some great people along the way. Highly recommended!", author: "Michael T.", location: "New York, NY", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
   ];
 
   const faqs = [
-    { question: "Is my car eligible for CarShare?", answer: "Most cars are eligible for CarShare. Generally, your car should be in good condition, have a clean title, and be no more than 12 years old. Some luxury and specialty vehicles may have different requirements." },
+    { question: "Is my car eligible for carzu?", answer: "Most cars are eligible for carzu. Generally, your car should be in good condition, have a clean title, and be no more than 12 years old. Some luxury and specialty vehicles may have different requirements." },
     { question: "How much can I earn?", answer: "Your earnings depend on various factors, including your car's make and model, your location, and how often you rent it out. On average, hosts earn $500 per month, but some earn significantly more." },
-    { question: "How does insurance work?", answer: "CarShare provides comprehensive insurance coverage for every rental. This includes liability protection, collision coverage, and 24/7 roadside assistance. Your personal insurance is not affected by renting out your car." },
+    { question: "How does insurance work?", answer: "carzu provides comprehensive insurance coverage for every rental. This includes liability protection, collision coverage, and 24/7 roadside assistance. Your personal insurance is not affected by renting out your car." },
     { question: "How do I get paid?", answer: "You'll receive payments directly to your bank account within 3-5 business days after each completed rental. We handle all the payment processing securely through our platform." },
   ];
 
@@ -44,7 +44,7 @@ const RentYourCar = () => {
           <section className="flex flex-col md:flex-row items-center gap-10 mb-16">
             <div className="flex-1">
               <h1 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Turn Your Car into Cash</h1>
-              <p className="text-xl mb-8">Join thousands of car owners who are earning extra income by renting out their vehicles on CarShare. It's easy, secure, and flexible.</p>
+              <p className="text-xl mb-8">Join thousands of car owners who are earning extra income by renting out their vehicles on carzu. It's easy, secure, and flexible.</p>
               <a href="/signup" className="inline-block px-8 py-4 bg-red-500 text-white rounded-full font-semibold text-lg transition duration-300 hover:bg-red-600">Get Started</a>
             </div>
             <div className="flex-1">
